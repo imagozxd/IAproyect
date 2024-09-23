@@ -23,11 +23,12 @@ public class TestAIEye : AIEyeBase
 
         if (ScanViewObj != null)
         {
+            Debug.Log("aquiantes");
             DataViewAttack.IsInSight(ScanViewObj.AimOffset);
             DataViewFire.IsInSight(ScanViewObj.AimOffset);
+            //Debug.Log("aqui");
         }
     }
-
     private void Update()
     {
         base.UpdateScan();
@@ -38,7 +39,7 @@ public class TestAIEye : AIEyeBase
         DataViewAttack.CreateMesh();
         DataViewFire.CreateMesh();
     }
-    private void OnDrawGizmos()
+    public void OnDrawGizmos()
     {
         mainDataView.OnDrawGizmos();
         DataViewAttack.OnDrawGizmos();

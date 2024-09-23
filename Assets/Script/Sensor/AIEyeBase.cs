@@ -71,6 +71,7 @@ public class AIEyeBase : MonoBehaviour
                  mainDataView.IsInSight(obj.transform))
                 {
                     ScanViewObj = ScanObj;
+                    Debug.Log("aqui");
                     return;
                 }
             }
